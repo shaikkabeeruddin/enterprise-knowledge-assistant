@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+chunks.pkl
+faiss_index.index
+data/faiss_index/
