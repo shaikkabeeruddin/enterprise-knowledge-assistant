@@ -17,41 +17,15 @@ The system allows users to:
 
 ## Architecture Diagram
 
-User
-  ↓
-Streamlit UI
-  ↓
-FastAPI Backend
-  ├── /upload/
-  │     ↓
-  │   PDF Upload
-  │     ↓
-  │   Text Extraction
-  │     ↓
-  │   Text Chunking
-  │     ↓
-  │   Metadata Attachment
-  │     ↓
-  │   Embedding Generation
-  │     ↓
-  │   FAISS Index Storage
-  │
-  └── /ask
-        ↓
-      User Question
-        ↓
-      Query Embedding
-        ↓
-      Semantic Retrieval from FAISS
-        ↓
-      Top-k Relevant Chunks
-        ↓
-      Gemini LLM
-        ↓
-      Answer + Sources
-        ↓
-      Streamlit UI
+## Architecture Diagram
 
+User → Streamlit UI → FastAPI Backend
+
+Document Ingestion Flow:
+PDF Upload → Text Extraction → Text Chunking → Metadata Attachment → Embedding Generation → FAISS Index Storage
+
+Question Answering Flow:
+User Question → Query Embedding → Semantic Retrieval from FAISS → Top-k Relevant Chunks → Gemini LLM → Answer + Sources → Streamlit UI
 
 ## Architecture Overview
 
