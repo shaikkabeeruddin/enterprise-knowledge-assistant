@@ -119,7 +119,7 @@ cd <your-project-folder>
 pip install -r requirements.txt
 ```
 
-### 3. Configure environment variables
+### 3. Configure API Key
 
 In utils/config.py add your google gemini api key
 
